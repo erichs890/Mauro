@@ -287,4 +287,4 @@ stream = ExtResource( 2 )
 position = Vector2( 431, 338 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 322, 415 )
+position = Vector2( 306, 429 )

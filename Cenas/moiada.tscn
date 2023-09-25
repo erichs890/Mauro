@@ -43,7 +43,8 @@ radius = 41.0488
 [node name="animacao" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
 animation = "girando"
-frame = 1
+frame = 3
+playing = true
 
 [node name="colisao" type="CollisionShape2D" parent="."]
 position = Vector2( 2, -13 )
