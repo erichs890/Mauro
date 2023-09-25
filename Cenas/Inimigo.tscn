@@ -25,6 +25,7 @@ script = ExtResource( 1 )
 position = Vector2( 2, -0.999996 )
 scale = Vector2( 0.203394, 0.200914 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="colisao" type="CollisionShape2D" parent="."]
@@ -39,7 +40,7 @@ scale = Vector2( 1.019, 0.98029 )
 shape = SubResource( 3 )
 
 [node name="timerPatrulha" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 7.189
 autostart = true
 
 [connection signal="body_entered" from="areaImpacto" to="." method="_on_areaImpacto_body_entered"]
