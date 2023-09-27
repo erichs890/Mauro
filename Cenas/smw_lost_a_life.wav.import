@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/smw_lost_a_life.wav-5f4fa4ce6b24d7303bbb8a8b77346115.sample"
+
+[deps]
+
+source_file="res://Cenas/smw_lost_a_life.wav"
+dest_files=[ "res://.import/smw_lost_a_life.wav-5f4fa4ce6b24d7303bbb8a8b77346115.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

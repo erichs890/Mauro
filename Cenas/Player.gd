@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Player
 export var gravity = 10
 export var walk_speed = 150
 export var jump_force = - 250
@@ -38,5 +39,10 @@ func _physics_process(delta):
 		$audioPaulo.play()
 	move_and_slide(velocity, Vector2.UP)
 
+func die():
+	$AnimationPlayer.play("MORREU")
+	$audioMorre.play()
+	set_physics_process(false)
+#	queue_free()
 func _on_notificador_screen_exited():
 	emit_signal("morreu")

@@ -9,4 +9,9 @@ func _on_timerPatrulha_timeout():
  
 
 func _on_areaImpacto_body_entered(body):
-	queue_free()
+	#queue_free()
+	$pisaramEmMim.play()
+	
+func _on_Hurtbox_body_entered(body):
+	if body is Player:
+		body.die()
