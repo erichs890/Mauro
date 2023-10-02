@@ -5,6 +5,7 @@ export var walk_speed = 150
 export var jump_force = - 250
 export var velocity = Vector2()
 export var can_double_jump = true
+export var jump_count = 2
 export var coins = 0
 signal morreu
 
@@ -26,16 +27,14 @@ func _physics_process(delta):
 		velocity.y = 0
 		
 	if is_on_floor():
-		can_double_jump = true
+		jump_count = 2
 	
 	if not is_on_floor():
 		velocity.y += gravity
 
-	if is_on_floor() and Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and jump_count > 0:
 		velocity.y = jump_force
-		$audioPaulo.play()
-	elif can_double_jump and Input.is_action_just_pressed("jump"):
-		velocity.y = jump_force
+		jump_count -= 1
 		$audioPaulo.play()
 	move_and_slide(velocity, Vector2.UP)
 
