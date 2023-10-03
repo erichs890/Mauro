@@ -298,7 +298,7 @@ position = Vector2( 442, 436 )
 scale = Vector2( 0.327917, 0.327917 )
 
 [node name="inimigo" parent="." instance=ExtResource( 6 )]
-position = Vector2( 546, 435 )
+position = Vector2( 548, 431 )
 
 [node name="Buraco" parent="." instance=ExtResource( 7 )]
 position = Vector2( -244, 626 )
