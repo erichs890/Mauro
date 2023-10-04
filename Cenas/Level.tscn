@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Assets Mario/mariotile.png" type="Texture" id=1]
 [ext_resource path="res://Assets Mario/sounds/01. Ground Theme.mp3" type="AudioStream" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Cenas/moiada.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Cenas/Inimigo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Cenas/Buraco.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Cenas/HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Cenas/Level.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -269,6 +271,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 11/z_index = 0
 
 [node name="Level" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="TileMpaCeu" type="TileMap" parent="."]
 position = Vector2( 1, 0 )
@@ -297,9 +300,73 @@ position = Vector2( 306, 429 )
 position = Vector2( 442, 436 )
 scale = Vector2( 0.327917, 0.327917 )
 
+[node name="moiada2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 484, 436 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 527, 434 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 565, 436 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 629, 391 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 705, 372 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 781, 397 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 804, 423 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 868, 428 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 911, 387 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 947, 355 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1006, 351 )
+scale = Vector2( 0.327917, 0.327917 )
+
+[node name="moiada13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1073, 362 )
+scale = Vector2( 0.327917, 0.327917 )
+
 [node name="inimigo" parent="." instance=ExtResource( 6 )]
-position = Vector2( 548, 431 )
+position = Vector2( 628, 436 )
 
 [node name="Buraco" parent="." instance=ExtResource( 7 )]
 position = Vector2( -244, 626 )
 scale = Vector2( 37.7553, -1.49906 )
+
+[node name="Control" parent="." instance=ExtResource( 8 )]
+
+[connection signal="body_exited" from="moiada" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada2" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada3" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada4" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada5" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada6" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada7" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada8" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada9" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada10" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada11" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada12" to="." method="_on_moiada_body_exited"]
+[connection signal="body_exited" from="moiada13" to="." method="_on_moiada_body_exited"]

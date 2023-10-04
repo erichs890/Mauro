@@ -108,4 +108,8 @@ stream = ExtResource( 9 )
 anims/MORREU = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.27
+
 [connection signal="screen_exited" from="notificador" to="." method="_on_notificador_screen_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

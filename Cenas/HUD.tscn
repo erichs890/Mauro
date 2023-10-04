@@ -1,9 +1,27 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
 
-[node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource path="res://Assets Mario/Super-Mario-World.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets Mario/mario coins hud.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/HUD.gd" type="Script" id=3]
 
-[node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+[sub_resource type="DynamicFont" id=1]
+size = 26
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Moiada" type="Label" parent="."]
+margin_left = 923.0
+margin_top = 5.0
+margin_right = 1020.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 898, 17 )
+scale = Vector2( 3.075, 4 )
+texture = ExtResource( 2 )
