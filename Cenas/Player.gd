@@ -37,7 +37,7 @@ func _physics_process(delta):
 		jump_count -= 1
 		velocity.y = jump_force
 		$audioPaulo.play()
-	move_and_slide(velocity, Vector2.UP)
+	velocity = move_and_slide(velocity, Vector2.UP)
 
 func die():
 	$AnimationPlayer.play("MORREU")
