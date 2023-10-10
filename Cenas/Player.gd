@@ -8,6 +8,12 @@ export var can_double_jump = true
 export var jump_count = 2
 export var coins = 0
 signal morreu
+export var vidas = 3
+
+func _ready():
+	$AudioTema.play()
+
+
 
 
 func _physics_process(delta):
@@ -44,9 +50,16 @@ func die():
 	$audioMorre.play()
 	set_physics_process(false)
 	$Timer.start()
+	$AudioTema.stop()
+	
 func _on_notificador_screen_exited():
 	emit_signal("morreu")
 
 
 func _on_Timer_timeout():
+	Global.vidas -= 1
 	get_tree().reload_current_scene()
+	
+	
+
+

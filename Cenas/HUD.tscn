@@ -22,13 +22,21 @@ margin_bottom = 53.0
 custom_fonts/font = SubResource( 1 )
 text = "0"
 
-[node name="Moiada2" type="Label" parent="."]
-margin_left = 923.0
-margin_top = 3.0
-margin_right = 1020.0
-margin_bottom = 53.0
+[node name="x" type="Label" parent="."]
+margin_left = 6.0
+margin_top = 51.0
+margin_right = 103.0
+margin_bottom = 101.0
 custom_fonts/font = SubResource( 1 )
-text = "0"
+text = "x"
+
+[node name="vidas" type="Label" parent="."]
+margin_left = 46.0
+margin_top = 50.0
+margin_right = 143.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 1 )
+text = "        3"
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 898, 17 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Cenas/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets Mario/sounds/smw_jump.wav" type="AudioStream" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets Mario/AtlasTexture/mario_walk0.tres" type="Texture" id=7]
 [ext_resource path="res://Assets Mario/AtlasTexture/MORTE1.tres" type="Texture" id=8]
 [ext_resource path="res://Assets Mario/sounds/smw_lost_a_life.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets Mario/Athletic Theme (PAL Version) - Super Mario World.wav" type="AudioStream" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -110,6 +111,10 @@ anims/RESET = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.27
+
+[node name="AudioTema" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -22.692
 
 [connection signal="screen_exited" from="notificador" to="." method="_on_notificador_screen_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
