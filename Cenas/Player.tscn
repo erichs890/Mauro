@@ -97,7 +97,7 @@ stream = ExtResource( 2 )
 current = true
 limit_left = -200
 limit_top = -50
-limit_right = 1500
+limit_right = 100000
 limit_bottom = 600
 
 [node name="notificador" type="VisibilityNotifier2D" parent="."]

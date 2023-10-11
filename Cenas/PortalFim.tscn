@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets Mario/AtlasTexture/Portal.tres" type="Texture" id=1]
-[ext_resource path="res://Cenas/Portal.gd" type="Script" id=2]
+[ext_resource path="res://Cenas/PortalFim.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.0
 height = 30.0
 
-[node name="Portal" type="Area2D"]
+[node name="PortalFim" type="Area2D"]
 script = ExtResource( 2 )
 
 [node name="sprite" type="Sprite" parent="."]
@@ -17,4 +17,4 @@ texture = ExtResource( 1 )
 position = Vector2( 0, 2 )
 shape = SubResource( 1 )
 
-[connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_PortalFim_body_entered"]
