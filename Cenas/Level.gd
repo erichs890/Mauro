@@ -1,3 +1,3 @@
 extends Node2D
 func _ready():
-	pass
+	Hud.update_hud()
