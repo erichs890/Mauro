@@ -10,9 +10,6 @@ export var coins = 0
 signal morreu
 export var vidas = 3
 
-func _ready():
-	$AudioTema.play()
-
 
 
 
@@ -58,8 +55,11 @@ func _on_notificador_screen_exited():
 
 func _on_Timer_timeout():
 	Global.vidas -= 1
-	get_tree().reload_current_scene()
-	
-	
+	Hud.update_hud()
+	if Global.vidas > 0:
+		get_tree().reload_current_scene()
+	else:
+		get_tree().change_scene("res://Cenas/gameover.tscn")
+		
 
 

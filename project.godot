@@ -21,11 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Mauro"
-run/main_scene="res://Cenas/Level.tscn"
+run/main_scene="res://Cenas/menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
+MusicManager="*res://Cenas/MusicManager.tscn"
 Global="*res://global.gd"
 Hud="*res://Cenas/HUD.tscn"
 
