@@ -47,7 +47,7 @@ func die():
 	$audioMorre.play()
 	set_physics_process(false)
 	$Timer.start()
-	$AudioTema.stop()
+	MusicManager.stop()
 	
 func _on_notificador_screen_exited():
 	emit_signal("morreu")
