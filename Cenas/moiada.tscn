@@ -46,7 +46,7 @@ script = ExtResource( 3 )
 [node name="animacao" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
 animation = "girando"
-frame = 2
+frame = 3
 playing = true
 
 [node name="colisao" type="CollisionShape2D" parent="."]
