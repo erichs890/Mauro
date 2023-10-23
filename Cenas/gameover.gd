@@ -2,7 +2,7 @@ extends Node2D
 
 func _ready():
 	Hud.visible = false
-#	Global.reset()
+	Global.reset()
 	$gameover.play()
 	$AnimationPlayer.play("gameover")
 

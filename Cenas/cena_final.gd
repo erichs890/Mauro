@@ -5,4 +5,5 @@ func _process(delta):
 		get_tree().change_scene("res://Cenas/menu.tscn")
 func _on_Button_pressed():
 	Global.reset()
+
 	get_tree().change_scene("res://Cenas/menu.tscn")
